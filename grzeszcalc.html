@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>MZIMUCALC</title>
+  </head>
+  <body>
+  <h1>TA MAHINA POLICZY TWOJE MZIMU</h1>
+  <h3>nalezy wprowadzic ilosc grzechow, oraz czy som ciezkie</h3>
+  <h3>a nastepnie pokaze sie twoj stan mzimu</h3>
+  <form id="mzimu"
+  <label for="grzehy">Od 1 do 33:</label>
+  <input type="text" id="grzehy" placeholder="Liczba grzechow">
+  <p>Ciezki?</p>
+  <label for="waga">Tylko 'TAK' lub 'NIE'</label>
+  <input type="text" id="waga" placeholder="powaznosc">
+  <button type="button" onclick="licz()">licz cepie</button>
+  <p id="wynik"></p>
+  </form>
+  <style>
+    body {
+      background-image: url('waga.jpg');
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+  <script>
+    function licz() {
+    const grzehyInput = document.getElementById('grzehy').value.trim();
+    const wagaInput = document.getElementById('waga').value.trim().toUpperCase();
+    const wynikEl = document.getElementById('wynik');
+
+    let grzehy = parseInt(grzehyInput);
+    //chuj
+    if (isNaN(grzehy)) {
+      wynikEl.innerText = "co ty pierdolisz";
+      return;
+    }
+    if (wagaInput !== "TAK" && wagaInput !== "NIE") {
+      wynikEl.innerText = "a co ja po chinsku mowilem co masz napisac?";
+      return;
+    }
+    let mzimu = 100 - (grzehy * 3);
+    
+    if (wagaInput === "TAK") {
+      mzimu = mzimu / 2;
+    }
+
+    if (grzehy === 0) {
+    wynikEl.innerText = "Wez gosciu spierdalaj napewno 0 nie masz"
+    return;
+  }
+
+    mzimu = Math.round(mzimu);
+
+    if (mzimu < 1) mzimu = 1; 
+    if (mzimu > 100) mzimu = 100;
+    
+    wynikEl.innerText = "Twoje mzimu to: " + mzimu + "%";
+
+    if (grzehyInput < 0) {
+    wynikEl.innerText = "co kurwa?";
+    }
+  }
+  </script>
+  </body>
+</html>
