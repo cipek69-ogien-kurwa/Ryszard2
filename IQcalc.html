@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>IQcalc</title>
+  </head>
+  <body>
+    <h1><span class="naglowek">MAHINA DO LICZENIA IQ</span></h1>
+  <h3><span class="naglowek">Odpowiedz na kilka pytan</span></h3>
+  <h3><span class="naglowek">a potem dowiesz sie ile masz iq</span></h3>
+  <h3><strong><span class="naglowek">JESLI MASZ NA IMIE KAROL TO NIE MASZ PRAWA WYKONAC TEGO</span></strong></h3>
+  <h3><strong><span class="naglowek">TESTU!!!</span></strong></h3>
+  <hr>
+  <h4>PYTANIE 1. lubisz japko?</h4>
+  <label>
+    <input type="radio" name="q1" value="0.8"> tak
+  </label>
+  <label>
+    <input type="radio" name="q1" value="0"> nie
+  </label>
+  <hr>
+  <h4>PYTANIE 2. czy Abi jest jednym z boguw?</h4>
+  <label>
+    <input type="radio" name="q2" value="-1"> tak
+  </label>
+  <label>
+    <input type="radio" name="q2" value="2"> nie
+  </label>
+  <hr>
+  <h4>PYTANIE 3. czy masz czarom skure?</h4>
+  <label>
+    <input type="radio" name="q3" value="0.2"> nie
+  </label>
+  <label>
+    <input type="radio" name="q3" value="0.2"> nie
+  </label>
+  <hr>
+  <h4>PYTANIE 4. czy javascript jest haram?</h4>
+  <label>
+    <input type="radio" name="q4" value="0.5"> tak
+  </label>
+  <label>
+    <input type="radio" name="q4" value="-0.2"> nie
+  </label>
+  <hr>
+  <h4>PYTANIE 5. czy wierzysz w Ryszarda</h4>
+  <label>
+    <input type="radio" name="q5" value="0.5"> tak
+  </label>
+  <label>
+    <input type="radio" name="q5" value="0.5"> tak ale nie wiedzialem (teraz wiem)
+  </label>
+  <hr>
+  <h1>TWUJ WYNIK: <span id="wynik">(tu bedzie wynik)</span></h1>
+  <button onclick="showResult()">pokasz wynik</button>
+  <button onclick="location.reload()">od nowa</button>
+
+  <script>
+    function showResult() {
+      let total = 0;
+
+      //nigger
+      const selected = document.querySelectorAll('input[type="radio"]:checked');
+      selected.forEach(radio => {
+        total += Number(radio.value);
+      });
+      document.getElementById("wynik").textContent = total.toFixed(2) + "L";
+    }
+    window.onbeforeunload = function () {
+      for (const input of document.querySelectorAll("input[type=radio]")) {
+       input.checked = false;
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-image: url(agartha.jpeg);
+      background-position: fixed;
+      background-attachment: scroll;
+      background-size: 100% 150%;
+    }
+    .naglowek {
+    background-color: blue;
+    padding: 4px;
+    }
+  </style>
+  <h1><a href="index.html">POWRUT</a></h1>
+  </body>
+</html>
