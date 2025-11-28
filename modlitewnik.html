@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>modlitewnik</title>
+  </head>
+  <body>
+    <h>MODLITEWNIK</h>
+    <h3>MODLITWY MASZ <a href="modlitwy.html">TU</a></h3>
+    <h4>Znajdziesz czas w kotrym jakie modlitwy musisz</h4>
+    <h4>wykonac aby utrzymywac szacunek Ryszarda.</h4>
+    <div id="zegar">DATA:</div>
+    <script>
+      function updateCock() { //no bo wiesz, clock brzmi jak cock
+      const now = new Date();
+      let year = now.getFullYear()
+      let day = now.getDate()
+      let month = now.getMonth() + 1;
+      let hours = now.getHours()
+      let minutes = now.getMinutes()
+      const timeString = "DATA: " + year + " "+ month + " " + day + '; ' + hours + ':' + minutes;
+      document.getElementById("zegar").textContent = timeString;
+      }
+      updateCock(); {
+      setInterval(updateCock, 1000); }
+    </script>
+    <noscript>NIE DZIALA U CIEBIE JAVASRIPT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</noscript>
+    <h5>MODLITA PORANNA</h5>
+    <p>Modlitwe te, masz odbyc KAZDEGO poranku</p>
+    <p>w godzinach od 4:00-10:00 MAKSYMALNIE!</p>
+    <p>Raz w ciagu doby.</p>
+    <h5>MODLITWA WIECZORNA (na noc)</h5>
+    <p>Modlitwe te, masz odbyc KAZDEGO wieczoru</p>
+    <p>w godzinach od 18:00-23:00 MAKSYMALNIE!</p>
+    <h5>MODLITWA NA ZGLADZENIE - WAZNE</h5>
+    <p>Jest to dosyc potezna modlitwa</p>
+    <p>i nalezy ja uzywac w przypadkach</p>
+    <p>do tego scisle wymaganych.</p>
+    <p>po tej modlitwie trzeba w ciagu tej</p>
+    <p>samej doby odbyc jeden fragment</p>
+    <p>rozanca Ryszardowskiego.</p>
+    <h4>UWAZAJ!!!! Corocznie w dniu 4.20 obchodzimy dzien braku grzechow</h4>
+    <h4>(oprocz pierwoRyszardowego) i trzeba modlitwe ta odmowic!</h4>
+    <h5>MODLITWA PIELGRZYMKOWA Z ARABII S.</h5>
+    <p>Ta modlitwa jest bardzo rzadka, i</p> 
+    <p>tylko sie jej uzywa podczas pielgryzmek</p>
+    <p>specyficznie do arabii saudyjskiej.</p>
+    <h1><a href="index.html">POWRUT</a></h1>
+  </body>
+</html>
